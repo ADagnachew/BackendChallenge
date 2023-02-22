@@ -38,7 +38,7 @@ public class SensorController {
 
     @ApiOperation( value = "Create a Sensors", response = Gateway.class )
     @PostMapping()
-    public ResponseEntity<?> createSensor(@RequestBody Sensor sensor){
+    public ResponseEntity<?> createSensor(Sensor sensor){
         try {
             return ResponseEntity.ok(sensorService.createSensor(sensor));
         }catch (BadRequestException e){
